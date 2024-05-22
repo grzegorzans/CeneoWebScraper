@@ -1,0 +1,18 @@
+{% extends "base.html.jinja" %}
+{% block title %}
+Ekstrakcja opinii o produkcie
+{% endblock title %}
+{% block content %}
+{% if error is defined %}
+<div class="alert alert-light" role="alert">
+    <strong style="color:red;">Uwaga!</strong> {{error}}
+</div>
+{% endif %}
+<form class="container" method="post">
+    <div class="mb-3">
+        <label for="product_id" class="form-label">ID produktu</label>
+        <input class="form-control" name="product_id" id="product_id" type="text" placeholder="12345678" aria-label="default input example" required>
+    </div>      
+    <button type="submit" class="btn btn-primary mb-3">Uruchom</button>
+</form>
+{% endblock content %}
