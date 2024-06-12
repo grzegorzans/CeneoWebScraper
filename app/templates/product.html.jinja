@@ -8,7 +8,6 @@ Nazwa produktu
 <table class="table table-striped-columns mt-3 mb-5">
     <thead>
         <tr>
-            <th scope="col">#</th>
             <th scope="col">Identyfikator opinii</th>
             <th scope="col">Autor</th>
             <th scope="col">Rekomendacja</th>
@@ -18,135 +17,26 @@ Nazwa produktu
             <th scope="col">Lista wad</th>
             <th scope="col">Data wystawienia opinii</th>
             <th scope="col">Data zakupu produktu</th>
-            <th scope="col">Ile osób uznało opinię za przydatną</th>
-            <th scope="col">Ile osób uznało opinię za nieprzydatną</th>
+            <th scope="col">+</th>
+            <th scope="col">-</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>14138428</td>
-            <td>Użytkownik Ceneo</td>
-            <td>null</td>
-            <td>3,5/5</td>
-            <td>pierwsze próby pokazały problemy z odpowiednim doborem ustawień, np naciśniety przycisk skanowania do pdf nie uruchomił skanowania. z pewnością się da ale trzeba będzie poczytać instrukcje. takie podstawowe funkcje powinny działać prosto bez potrzeby czytania instrukcji.\ndziała wolniej niż się spodziewałem. oprogramowanie i obsługa przydała by się bardziej intuicyjna. skanuje poprawnie.</td>
-            <td>jakość</td>
-            <td>głośność pracy, szybkość</td>
-            <td>2021-03-18 11:13:12</td>
-            <td>2021-03-10 22:30:25</td>
-            <td>0</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>11176848</td>
-            <td>Krzysztof</td>
-            <td>Polecam</td>
-            <td>4/5</td>
-            <td>Urządzenie spełnia moje oczekiwania dla potrzeb skanowania raz na jakiś czas pojedynczych dokumentów i stron z folderów, gazet lub wydrukowanych zdjęć, chociaż działa stosunkowo powoli i dość głośno. \r\nMa rozbudowaną instrukcję obsługi.</td>
-            <td></td>
-            <td>głośność pracy, szybkość</td>
-            <td>2019-10-20 11:11:14</td>
-            <td>2019-10-10 16:55:25</td>
-            <td>0</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>14138428</td>
-            <td>Użytkownik Ceneo</td>
-            <td>null</td>
-            <td>3,5/5</td>
-            <td>pierwsze próby pokazały problemy z odpowiednim doborem ustawień, np naciśniety przycisk skanowania do pdf nie uruchomił skanowania. z pewnością się da ale trzeba będzie poczytać instrukcje. takie podstawowe funkcje powinny działać prosto bez potrzeby czytania instrukcji.\ndziała wolniej niż się spodziewałem. oprogramowanie i obsługa przydała by się bardziej intuicyjna. skanuje poprawnie.</td>
-            <td>jakość</td>
-            <td>głośność pracy, szybkość</td>
-            <td>2021-03-18 11:13:12</td>
-            <td>2021-03-10 22:30:25</td>
-            <td>0</td>
-            <td>2</td>
-        </tr>
-        <tr>
+        {% for opinion in opinions %}
+          <tr>
+              <td>{{opinion.opinion_id}}</td>
+              <td>{{opinion.author}}</td>
+              <td>{{opinion.recommendation}}</td>
+              <td>{{opinion.stars}}</td>
+              <td>{{opinion.content}}</td>
+              <td>{{opinion.pros}}</td>
+              <td>{{opinion.cons}}</td>
+              <td>{{opinion.post_date}}</td>
+              <td>{{opinion.purchase_date}}</td>
+              <td>{{opinion.useful}}</td>
+              <td>{{opinion.useless}}</td>
+          </tr>
+        {% endfor %}
     </tbody>
 </table>
-<!--
-<table class="table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Identyfikator opinii</th>
-        <th scope="col">Autor</th>
-        <th scope="col">Rekomendacja</th>
-        <th scope="col">Liczba gwiazdek</th>
-        <th scope="col">Data wystawienia opinii</th>
-        <th scope="col">Data zakupu produktu</th>
-        <th scope="col">Ile osób uznało opinię za przydatną</th>
-        <th scope="col">Ile osób uznało opinię za nieprzydatną</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>3123123</td>
-        <td>Otto</td>
-        <td>polecam</td>
-        <td>4/5</td>
-        <td>2016-08-29 17:06:10</td>
-        <td>2016-08-29 17:06:10</td>
-        <td>1</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td colspan="9">
-          <table class="table mb-0">
-            <thead>
-              <tr>
-                <th scope="col">Treść opinii</th>
-                <th scope="col">Lista zalet</th>
-                <th scope="col">Lista wad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Urządzenie spełnia moje oczekiwania dla potrzeb skanowania raz na jakiś czas pojedynczych dokumentów i stron z folderów, gazet lub wydrukowanych zdjęć, chociaż działa stosunkowo powoli i dość głośno. Ma rozbudowaną instrukcję obsługi.</th>
-                <td></td>
-                <td>głośność pracy, szybkość</td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>3956932</td>
-        <td>Użytkownik Ceneo</td>
-        <td>Polecam</td>
-        <td>5/5</td>
-        <td>2016-09-16 16:29:21</td>
-        <td>2016-08-29 17:06:10</td>
-        <td>1</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td colspan="9">
-          <table class="table mb-0">
-            <thead>
-              <tr>
-                <th scope="col">Treść opinii</th>
-                <th scope="col">Lista zalet</th>
-                <th scope="col">Lista wad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Prosty szybki i łatwy w obsłudze skaner. Idealny do prac domowych i w małym biurze.</th>
-                <td>głośność pracy, jakość, szybkość</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
--->
 {% endblock content %}
