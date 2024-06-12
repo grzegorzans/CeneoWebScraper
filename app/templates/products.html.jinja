@@ -3,5 +3,56 @@
 Lista produktów
 {% endblock title %}
 {% block content %}
-    <p>Strona z listą produktów.</p>
+<p>Lista produktów, dla których zostały pobrane opinie:</p>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+        <div class="card w-100" style="width: 18rem;">
+            <div class="card-body">
+                <a href=""><h5 class="card-title">Drukarka Brother HL-1210WE</h5></a>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Liczba opinii 174</li>
+                <li class="list-group-item">Liczba wad 223</li>
+                <li class="list-group-item">Liczba zalet 323</li>
+                <li class="list-group-item">Średnia ocena 4,7</li>
+            </ul>
+            <div class="card-body text-end">
+                <a href="#" class="btn btn-primary">Pobierz plik z opiniami</a>
+                <!--<button type="button" class="btn btn-primary">Pobierz plik z opiniami</button>-->
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card w-100" style="width: 18rem;">
+            <div class="card-body">
+                <a href=""><h5 class="card-title">Nazwa produktu</h5></a>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Liczba opinii</li>
+                <li class="list-group-item">Liczba wad</li>
+                <li class="list-group-item">Liczba zalet</li>
+                <li class="list-group-item">Średnia ocena</li>
+            </ul>
+            <div class="card-body text-end">
+                <a href="#" class="btn btn-primary">Pobierz plik z opiniami</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card w-100" style="width: 18rem;">
+            <div class="card-body">
+                <a href=""><h5 class="card-title">Nazwa produktu</h5></a>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Liczba opinii</li>
+                <li class="list-group-item">Liczba wad</li>
+                <li class="list-group-item">Liczba zalet</li>
+                <li class="list-group-item">Średnia ocena</li>
+            </ul>
+            <div class="card-body text-end">
+                <a href="#" class="btn btn-primary">Pobierz plik z opiniami</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
